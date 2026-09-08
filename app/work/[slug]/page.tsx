@@ -3,10 +3,13 @@ import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { projects, getProject } from "@/lib/projects";
 
+type PageProps = { params: Promise<{ slug: string }> };
+
 export function generateStaticParams() { return projects.map((project) => ({ slug: project.slug })); }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const project = getProject(params.slug);
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params;
+  const project = getProject(slug);
   if (!project) return { title: "Project not found" };
   return { title: `${project.title} | Oluwafemi Ayansola`, description: project.summary };
 }
@@ -23,8 +26,9 @@ function CaseVisual({ kind }: { kind: string }) {
   </div></div></div>;
 }
 
-export default function CaseStudy({ params }: { params: { slug: string } }) {
-  const project = getProject(params.slug);
+export default async function CaseStudy({ params }: PageProps) {
+  const { slug } = await params;
+  const project = getProject(slug);
   if (!project) notFound();
   return <main className="case-page">
     <header className="case-nav wrap"><Link href="/" className="case-back"><ArrowLeft size={16} /> BACK TO INDEX</Link><span className="mono">OA / CASE STUDY</span><span className="mono">{project.number} / 06</span></header>
