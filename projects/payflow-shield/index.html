@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PayFlow Shield — AI-assisted cashflow operations for SMEs.">
+  <title>PayFlow Shield — Cashflow OS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="logo" href="#top" aria-label="PayFlow Shield home"><span></span>PayFlow Shield</a>
+    <div class="nav-links">
+      <a href="#product">Product</a>
+      <a href="#why">Why now</a>
+      <a href="#pricing">Pricing</a>
+      <button class="button button-light" data-demo>Request demo</button>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow">AI cashflow operations for SMEs</span>
+        <h1>Stop chasing money.<br><span>Start controlling cash.</span></h1>
+        <p>Prioritise risky invoices, automate follow-ups, organise disputes and give finance teams one clear queue for the next best action.</p>
+        <div class="actions">
+          <a class="button button-light" href="#product">See the product ↓</a>
+          <button class="button button-dark" data-sandbox>Launch sandbox</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="product" class="section">
+      <div class="wrap">
+        <span class="kicker">The operating layer</span>
+        <h2>Receivables, without the spreadsheet.</h2>
+        <p class="sub">A focused operations layer for invoice risk, collection workflows and dispute preparation, designed to sit alongside accounting and payment systems.</p>
+
+        <div class="dashboard">
+          <div class="dash-head">
+            <strong>Portfolio overview</strong>
+            <span><i class="live-dot"></i> Live simulation</span>
+          </div>
+          <div class="metrics">
+            <div><small>Outstanding</small><b>$482k</b></div>
+            <div><small>At risk</small><b>$74k</b></div>
+            <div><small>Recovered</small><b class="positive">$31.8k</b></div>
+            <div><small>Days saved</small><b>86h</b></div>
+          </div>
+          <div class="queue-head">
+            <strong>Priority queue</strong>
+            <div class="filters" role="group" aria-label="Invoice filters">
+              <button class="filter active" data-filter="all">All</button>
+              <button class="filter" data-filter="risk">At risk</button>
+              <button class="filter" data-filter="low">Low risk</button>
+            </div>
+          </div>
+          <div class="invoice-list">
+            <article class="invoice" data-risk="risk"><strong>Acme Facilities</strong><span>$18,420</span><span>21 days</span><em>Auto-followup</em></article>
+            <article class="invoice" data-risk="risk"><strong>Northstar Studio</strong><span>$7,880</span><span>44 days</span><em>Dispute</em></article>
+            <article class="invoice" data-risk="low"><strong>Greenline Build</strong><span>$32,100</span><span>12 days</span><em>Low risk</em></article>
+          </div>
+        </div>
+
+        <div id="why" class="feature-grid">
+          <div class="card"><div class="icon">◈</div><h3>Risk scoring</h3><p>Prioritise accounts using invoice age, payment behaviour, customer history and operational signals.</p></div>
+          <div class="card"><div class="icon">↗</div><h3>Collection workflows</h3><p>Prepare reminder sequences, escalation notes and evidence packs while keeping humans in control.</p></div>
+          <div class="card"><div class="icon">⌁</div><h3>Cross-border ready</h3><p>Design workflows around NGN, GBP and USD operations with exportable audit trails.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <span class="kicker">Revenue model</span>
+            <h2>Build for $50k MRR.</h2>
+            <p>Illustrative route: 100 Growth customers at $499/month = $49,900 MRR, before usage fees or enterprise contracts. The target is a model, not a guarantee.</p>
+          </div>
+          <button class="button button-light" data-pricing>View pricing</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Prototype • PayFlow Shield • Validate demand before adding production integrations, automation or regulated workflows.</footer>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
